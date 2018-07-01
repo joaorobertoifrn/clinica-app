@@ -1,0 +1,41 @@
+<!-- -->
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong>Agenda</strong> Médica
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="email" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input [(ngModel)]="creds.email" name="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="senha" item-start class="text-primary"></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input [(ngModel)]="creds.senha" name="senha" type="password"></ion-input>
+      </ion-item>
+    </form>
+
+    <p text-right ion-text color="secondary" tappable (click)="forgotPass()"><strong>Esqueceu a senha?</strong></p>
+
+    <div>
+      <button ion-button icon-start block color="dark" tappable (click)="login()">
+        <ion-icon name="log-in"></ion-icon>
+        Acessar
+      </button>
+    </div>
+  </div>
+</ion-content>
