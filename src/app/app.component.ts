@@ -34,7 +34,11 @@ export class MyApp {
 
   ionViewWillEnter() {
     let localUser = this.storage.getLocalUser();
-    this.emailUser = localUser.email;
+    if (localUser) {
+      this.emailUser = localUser.email;
+    } else {
+      this.emailUser = '';
+    }
 }
 
   constructor(
