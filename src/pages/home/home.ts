@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, PopoverController} from "ionic-angular";
-import {Storage} from '@ionic/storage';
+import { DashboardDTO } from "../../models/dashboard.dto";
+import { DashboardService } from "../../services/dashboard.service";
 
 @Component({
   selector: 'page-home',
@@ -9,10 +10,21 @@ import {Storage} from '@ionic/storage';
 
 export class HomePage {
 
-  constructor(private storage: Storage, public nav: NavController, public popoverCtrl: PopoverController) {
+  dash: DashboardDTO;
+
+  constructor(
+    public nav: NavController,
+    public popoverCtrl: PopoverController,
+    public dashboardService: DashboardService) {
   }
 
   ionViewWillEnter() {
+    this.dashboardService.findAll()
+      .subscribe(response => {
+        this.dash = response as DashboardDTO;
+      },
+      error => {});
+
   }
 
 }

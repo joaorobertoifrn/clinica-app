@@ -9,7 +9,6 @@ import {
 import { Observable } from "rxjs/Rx"; // IMPORTANTE: IMPORT ATUALIZADO
 import { StorageService } from "../services/storage.service";
 import { API_CONFIG } from "../config/api.config";
-import { LocalServidor } from "../models/local_servidor";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -20,17 +19,6 @@ export class AuthInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     let localUser = this.storage.getLocalUser();
-    let localServidor = this.storage.getLocalServidor();
-
-    if (localServidor) {
-      let serv: LocalServidor = {
-        urlAPI: API_CONFIG.baseUrl
-      };
-      this.storage.setLocalServidor(serv);
-    } else {
-      API_CONFIG.baseUrl = localServidor.urlAPI;
-    }
-
     let N = API_CONFIG.baseUrl.length;
     let requestToAPI = req.url.substring(0, N) == API_CONFIG.baseUrl;
 
