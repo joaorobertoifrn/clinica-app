@@ -7,8 +7,12 @@ import { Keyboard } from '@ionic-native/keyboard';
 
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
-import { LocalWeatherPage } from "../pages/local-weather/local-weather";
 import { AuthService } from '../services/auth.service';
+import { ConvenioPage } from "../pages/convenio/convenio";
+import { PacientePage } from "../pages/paciente/paciente";
+import { ProfissionalPage } from "../pages/profissional/profissional";
+import { LocalAtendimentoPage } from "../pages/local-atendimento/local-atendimento";
+import { UsuarioPage } from "../pages/usuario/usuario";
 
 export interface MenuItem {
     title: string;
@@ -38,7 +42,12 @@ export class MyApp {
 
     this.appMenuItems = [
       {title: 'Home', component: HomePage, icon: 'home'},
-      {title: 'Local Weather', component: LocalWeatherPage, icon: 'partly-sunny'}
+      {title: 'Convênio', component: ConvenioPage, icon: 'md-cube'},
+      {title: 'Paciente', component: PacientePage, icon: 'md-cube'},
+      {title: 'Profissional', component: ProfissionalPage, icon: 'md-cube'},
+      {title: 'Local Atendimento', component: LocalAtendimentoPage, icon: 'md-cube'},
+      {title: 'Usuário', component: UsuarioPage, icon: 'md-people'},
+
     ];
   }
 

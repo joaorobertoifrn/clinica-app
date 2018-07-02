@@ -45,13 +45,11 @@ export class LoginPage {
         {
           text: 'Cancelar',
           handler: data => {
-            console.log('Cancelar click');
           }
         },
         {
           text: 'Enviar',
           handler: data => {
-            console.log('Enviar clicked');
             let toast = this.toastCtrl.create({
               message: 'Email enviado com sucesso',
               duration: 3000,
@@ -82,14 +80,13 @@ export class LoginPage {
     this.auth.authenticate(this.creds)
       .subscribe(response => {
         this.auth.successfulLogin(response.headers.get('Authorization'));
-        console.log("Logado com sucesso");
         this.nav.setRoot(HomePage);
       },
       error => {});
   }
 
   signup() {
-    this.nav.push('RegisterPage');
+    this.nav.push(RegisterPage);
   }
 
   ionViewWillEnter() {

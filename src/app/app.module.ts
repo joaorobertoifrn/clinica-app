@@ -3,32 +3,25 @@ import {IonicApp, IonicModule} from "ionic-angular";
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
-
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {Keyboard} from '@ionic-native/keyboard';
-
-import {ActivityService} from "../services/activity-service";
-import {TripService} from "../services/trip-service";
-import {WeatherProvider} from "../services/weather";
-
 import {MyApp} from "./app.component";
-
 import {SettingsPage} from "../pages/settings/settings";
-import {CheckoutTripPage} from "../pages/checkout-trip/checkout-trip";
 import {HomePage} from "../pages/home/home";
 import {LoginPage} from "../pages/login/login";
-import {NotificationsPage} from "../pages/notifications/notifications";
 import {RegisterPage} from "../pages/register/register";
-import {SearchLocationPage} from "../pages/search-location/search-location";
-import {TripDetailPage} from "../pages/trip-detail/trip-detail";
-import {TripsPage} from "../pages/trips/trips";
-import {LocalWeatherPage} from "../pages/local-weather/local-weather";
-
 import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
 import { AuthInterceptorProvider } from '../interceptors/auth.interceptors';
 import { ErrorInterceptorProvider } from '../interceptors/error.interceptors';
+import { ConvenioPage } from "../pages/convenio/convenio";
+import { ConvenioService } from "../services/convenio.service";
+import { PacientePage } from "../pages/paciente/paciente";
+import { ProfissionalPage } from "../pages/profissional/profissional";
+import { LocalAtendimentoPage } from "../pages/local-atendimento/local-atendimento";
+import { UsuarioPage } from "../pages/usuario/usuario";
+import { DashboardService } from "../services/dashboard.service";
 
 // import services
 // end import services
@@ -41,15 +34,16 @@ import { ErrorInterceptorProvider } from '../interceptors/error.interceptors';
   declarations: [
     MyApp,
     SettingsPage,
-    CheckoutTripPage,
+
     HomePage,
     LoginPage,
-    LocalWeatherPage,
-    NotificationsPage,
+
     RegisterPage,
-    SearchLocationPage,
-    TripDetailPage,
-    TripsPage
+    ConvenioPage,
+    PacientePage,
+    ProfissionalPage,
+    LocalAtendimentoPage,
+    UsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -68,15 +62,16 @@ import { ErrorInterceptorProvider } from '../interceptors/error.interceptors';
   entryComponents: [
     MyApp,
     SettingsPage,
-    CheckoutTripPage,
+
     HomePage,
     LoginPage,
-    LocalWeatherPage,
-    NotificationsPage,
+
     RegisterPage,
-    SearchLocationPage,
-    TripDetailPage,
-    TripsPage
+    ConvenioPage,
+    PacientePage,
+    ProfissionalPage,
+    LocalAtendimentoPage,
+    UsuarioPage
   ],
   providers: [
     StatusBar,
@@ -86,9 +81,8 @@ import { ErrorInterceptorProvider } from '../interceptors/error.interceptors';
     StorageService,
     AuthInterceptorProvider,
     ErrorInterceptorProvider,
-    ActivityService,
-    TripService,
-    WeatherProvider
+    ConvenioService,
+    DashboardService
   ]
 })
 
