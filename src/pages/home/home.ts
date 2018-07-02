@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController, PopoverController} from "ionic-angular";
 import { DashboardDTO } from "../../models/dashboard.dto";
 import { DashboardService } from "../../services/dashboard.service";
+import { SettingsPage } from "../settings/settings";
 
 @Component({
   selector: 'page-home',
@@ -15,7 +16,13 @@ export class HomePage {
   constructor(
     public nav: NavController,
     public popoverCtrl: PopoverController,
+
     public dashboardService: DashboardService) {
+  }
+
+  // Pagina de Configurações
+  doConfiguracoes() {
+    this.nav.push(SettingsPage);
   }
 
   ionViewWillEnter() {
@@ -24,7 +31,6 @@ export class HomePage {
         this.dash = response as DashboardDTO;
       },
       error => {});
-
   }
 
 }
