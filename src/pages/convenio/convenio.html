@@ -14,8 +14,12 @@
 </ion-header>
 
 <ion-content padding class="trips detail-bg">
+    <ion-fab top right edge>
+        <button navPush="ConvenioDetalhePage" ion-fab mini><ion-icon name="md-add-circle"></ion-icon></button>
+      </ion-fab>
+
   <!--lista convenios-->
-  <div class="trip card" *ngFor="let convenio of convenios" tappable (click)="viewDetail(convenio.id)" margin-bottom>
+  <div class="trip card" *ngFor="let convenio of convenios" tappable (click)="carregaTela(convenio.id)" margin-bottom>
     <div class="background border-bottom">
       <div class="background-filter rlt">
         <div class="align-bottom" padding-left padding-right>

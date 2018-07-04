@@ -4,7 +4,7 @@ import { ConvenioPage } from './convenio';
 
 @NgModule({
   declarations: [
-    ConvenioPage,
+    ConvenioPage
   ],
   imports: [
     IonicPageModule.forChild(ConvenioPage),

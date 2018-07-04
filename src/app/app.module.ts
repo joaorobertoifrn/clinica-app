@@ -22,6 +22,10 @@ import { ProfissionalPage } from "../pages/profissional/profissional";
 import { LocalAtendimentoPage } from "../pages/local-atendimento/local-atendimento";
 import { UsuarioPage } from "../pages/usuario/usuario";
 import { DashboardService } from "../services/dashboard.service";
+import { LocalAtendimentoDetalhePage } from "../pages/local-atendimento-detalhe/local-atendimento-detalhe";
+import { PacienteDetalhePage } from "../pages/paciente-detalhe/paciente-detalhe";
+import { ProfissionalDetalhePage } from "../pages/profissional-detalhe/profissional-detalhe";
+import { UsuarioDetalhePage } from "../pages/usuario-detalhe/usuario-detalhe";
 
 // import services
 // end import services
@@ -43,7 +47,12 @@ import { DashboardService } from "../services/dashboard.service";
     PacientePage,
     ProfissionalPage,
     LocalAtendimentoPage,
-    UsuarioPage
+    UsuarioPage,
+
+    LocalAtendimentoDetalhePage,
+    PacienteDetalhePage,
+    ProfissionalDetalhePage,
+    UsuarioDetalhePage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +80,12 @@ import { DashboardService } from "../services/dashboard.service";
     PacientePage,
     ProfissionalPage,
     LocalAtendimentoPage,
-    UsuarioPage
+    UsuarioPage,
+
+    LocalAtendimentoDetalhePage,
+    PacienteDetalhePage,
+    ProfissionalDetalhePage,
+    UsuarioDetalhePage
   ],
   providers: [
     StatusBar,

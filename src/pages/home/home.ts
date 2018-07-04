@@ -12,6 +12,7 @@ import { SettingsPage } from "../settings/settings";
 export class HomePage {
 
   dash: DashboardDTO;
+  page : number = 0;
 
   constructor(
     public nav: NavController,
@@ -32,5 +33,6 @@ export class HomePage {
       },
       error => {});
   }
+
 
 }

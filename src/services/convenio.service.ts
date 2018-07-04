@@ -15,7 +15,7 @@ export class ConvenioService {
   }
 
   findById(id: string) {
-    return this.http.get(`${API_CONFIG.baseUrl}/convenio/${id}`);
+    return this.http.get<ConvenioDTO>(`${API_CONFIG.baseUrl}/convenio/${id}`);
   }
 
   insert(obj: ConvenioDTO) {

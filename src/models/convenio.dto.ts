@@ -1,5 +1,5 @@
 export interface ConvenioDTO {
-  id : number;
+  id : string;
   nome : string;
   registroANS : string;
   razaoSocial : string;
@@ -7,6 +7,6 @@ export interface ConvenioDTO {
   codigoCNS : string;
   telefone : string;
   email : string;
-  periodoRetorno : number;
+  periodoRetorno : string;
   particular : boolean;
 }
